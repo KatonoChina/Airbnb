@@ -62,7 +62,6 @@ open_BtnNumber.addEventListener('click', function(){
     }
 );
 
-
 //--------------------------↑ここまでhide-searchbox開閉--------------------------//
 
 //--------------------------↓ここからhide-box2-項目選択--------------------------//
@@ -555,8 +554,8 @@ const guestNumberCount = function() {
         count_value_adult += 1;
         count_disp_adult.innerHTML = count_value_adult;
         count_disp_guestNumberDefault.classList.add('guest-bottom-1-delete');
+        count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
         count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + count_value_adult + "人";
-        
     };
 
     count_down_btn_adult.onclick = function (){
@@ -594,7 +593,8 @@ const guestNumberCount = function() {
        count_value_baby += 1;
        count_disp_baby.innerHTML = count_value_baby;
        count_disp_guestNumberDefault.classList.add('guest-bottom-1-delete');
-        count_disp_guestNumberAllCountedBaby.innerHTML = "乳幼児" + count_value_baby + "人";
+       count_disp_guestNumberAllCountedBaby.classList.remove('display-none');
+       count_disp_guestNumberAllCountedBaby.innerHTML = ",乳幼児" + count_value_baby + "人";
     };
     
     count_down_btn_baby.onclick = function (){
@@ -602,7 +602,6 @@ const guestNumberCount = function() {
            count_value_baby -= 1;
          }
        count_disp_baby.innerHTML = count_value_baby;
-       
     };
 
 
@@ -619,8 +618,7 @@ const guestNumberCount = function() {
        if(count_value_pet >= 1) {
            count_value_pet -= 1;
          }
-       count_disp_pet.innerHTML = count_value_pet;
-       
+       count_disp_pet.innerHTML = count_value_pet; 
     };
 
 

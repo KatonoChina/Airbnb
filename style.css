@@ -49,7 +49,9 @@ body{
     height:100%;*/
     box-sizing: border-box;
 }
-
+.display-none{
+    display: none !important;
+}
 .display-visible{
     display:initial;
 }
@@ -329,6 +331,10 @@ header{
 
 .location-box-b div{
     cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
 }
 
 .plus1day,
@@ -823,10 +829,6 @@ section{
 
 
 
-
-
-
-
 .guestsearch-box-b{
     align-items: center;
     display: flex;
@@ -843,21 +845,31 @@ section{
 }
 
 .search-box-b{
-    background-color:#ff385c;
     cursor: pointer;
     border-radius: 24px; /*レスポンシブ*/
     white-space: nowrap;
+    background: linear-gradient(to right,#E61E4D 0%,#E31C5F 50%,#D70466 100%);
 }
 
 .search-box-d{
     padding: 16px; /*レスポンシブ*/
     display: inline-flex;
     color:#fff;
+    padding-left: 32px;
 }
-
-.sagasu{
+.mushimegane{
+    width: 23px;
+    overflow: visible;
+    position: absolute;
+    left: 14px;
+    transform: translateY(-3px);
+}
+.kensaku{
     padding-left: 8px;
     padding-right: 4px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
 }
 
 /*--↓ここから.submenu-guestnumber--*/
@@ -957,11 +969,21 @@ section{
 .guest-bottom-1-delete{
     display: none;
 }
-
 .guest-bottom-2{
+    width: 100%;
+}
+.guest-bottom-2-inner{
     overflow: hidden;
     display: block;
     width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    color: #222;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-shrink: 0;
 }
 
 
@@ -972,6 +994,7 @@ section{
     overflow: hidden;
     display: block;
     width: 100%;
+    text-overflow: ellipsis;
 }
 
 /*--↑ここまで.submenu-guestnumber--*/
@@ -1128,14 +1151,91 @@ section{
 /*----↓ここからnav-bar-left----*/
 .nav-bar-left{
     width: calc(100% - 100px);
+    position: relative;
+}
+
+.nav-bar-left__scroll-btn-wrap{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.nav-bar-left__scroll-btn-wrap--left{
+    background-image: linear-gradient(to left,rgb(255 255 255/0),#fff 30px);
+    left:0px;
+    padding-left: 8px;
+}
+.nav-bar-left__scroll-btn-wrap--right{
+    background-image: linear-gradient(to right,rgb(255 255 255/0),#fff 30px);
+    right:0px;
+    padding-right: 8px;
+}
+.nav-bar-left__scroll-btn{
+    padding: 0 0 0 0;
+    position: relative;
+}
+.nav-bar-left__scroll-btn--left{
+    left:8px;
+}
+.nav-bar-left__scroll-btn--right{
+    right:8px;
+}
+.nav-bar-left__scroll-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    border-top: solid 2.5px #333;
+    border-right: solid 2.5px #333;
+}
+.nav-bar-left__scroll-btn--left::before {
+    left: 0;
+    margin-left: 3.5px;
+    transform: rotate(225deg);
+}
+.nav-bar-left__scroll-btn--right::before {
+    right: 0;
+    margin-right: 3.5px;
+    transform: rotate(45deg);
+}
+.nav-bar-left__scroll-btn::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    border: solid 0.8px #aaa;
+}
+.nav-bar-left__scroll-btn--left::after {
+    left: -8px;
+}
+.nav-bar-left__scroll-btn--right::after {
+    right: -8px;
+}
+.nav-slider-area{
+    width: 100%;
     overflow-x: scroll;
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    position: relative;
 }
-.nav-bar-left::-webkit-scrollbar{
+.nav-slider-area::-webkit-scrollbar{
     display: none;
-  }
+}
 .nav{
     box-sizing: border-box;
     display: flex;
