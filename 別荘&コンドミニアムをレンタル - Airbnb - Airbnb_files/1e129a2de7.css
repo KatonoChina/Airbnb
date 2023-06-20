@@ -1,0 +1,55 @@
+.c1suwsce[class][class]{display:flex;flex-direction:column;align-items:center;gap:var(--h-x-sf-jw);}
+
+.dir.c1suwsce[class][class]{margin-left:var(--ikx-k-pe);margin-right:var(--ikx-k-pe);margin-top:var(--kksqe-v);margin-bottom:var(--ikx-k-pe);}
+
+.c1suwsce[class][class]::before{content:'';display:block;position:absolute;top:var(--fgg-f-l-a);width:40px;height:4px;}
+
+.dir.c1suwsce[class][class]::before{border-radius:4px;background-color:rgba(32,32,32,0.2);}
+
+.dir-ltr.c1suwsce[class][class]::before{left:50%;transform:translateX(-20px);}
+
+.dir-rtl.c1suwsce[class][class]::before{right:50%;transform:translateX(20px);}
+
+.hg9607o[class][class]{-webkit-tap-highlight-color:transparent;}
+
+.t1lpbo7o[class][class]{flex-grow:1;display:flex;justify-content:center;}
+
+.dir.t1w460q1[class][class]{padding-top:calc((var(--j-p-z-kco) - var(--c-zdwk-p)) / 2);padding-bottom:calc((var(--j-p-z-kco) - var(--c-zdwk-p)) / 2);}
+
+.t1axofqi[class][class]{font-size:var(--c-zdwk-p);font-weight:var(--jx-zk-pv);white-space:pre-line;line-height:var(--j-p-z-kco);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+.dir.t1axofqi[class][class]{text-align:center;}
+
+@supports (overflow:clip){
+.t1axofqi[class][class]{overflow:clip;}}
+
+@media (max-device-height:700px){
+.tid59ks[class][class]{display:none;}}
+
+.somhjwr[class][class]{line-height:var(--f-l-h-bac);}
+
+.s11qk31z[class][class]{display:none;}
+.dir.ic0uzbl[class][class]{-webkit-margin-start:var(--h-x-sf-jw);margin-inline-start:var(--h-x-sf-jw);}
+
+.ic0uzbl[class][class] > svg{display:inline-block !important;vertical-align:middle;}
+
+.dir.ic0uzbl[class][class] > svg{margin-bottom:2px;}
+
+.t1ee64dq[class][class]{color:var(--fo-jk-r-s);font-size:var(--f-cv-j-j-p);line-height:var(--f-l-h-bac);}
+
+.h3y8qs1[class][class]{display:none;}
+
+@media (min-width:744px){
+.h3y8qs1[class][class]{display:revert;}}
+
+@media (min-width:744px){
+.s1cq0qpf[class][class]{display:none;}}
+
+.sarr7qx[class][class]{-webkit-appearance:none;appearance:none;-webkit-user-select:auto;user-select:auto;display:inline;}
+
+.dir.sarr7qx[class][class]{background:transparent;border:0;cursor:pointer;margin:0;padding:0;}
+
+.dir.sarr7qx[class][class]:disabled{cursor:not-allowed;}
+
+@media (hover:hover){
+.sarr7qx[class][class]:disabled:hover{-webkit-text-decoration:none;text-decoration:none;}}

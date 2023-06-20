@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+img{
+	vertical-align:bottom;
+	width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+}
+
+button{
+    border:none;
+    background: transparent ;
+    outline :none; 
+}
+
+body{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #222;
+    background-color: #fff;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*letter-spacing: 0.05em;
+    height:100%;*/
+    box-sizing: border-box;
+}
+
+main{
+    margin:100px 50px;
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-auto-rows: var( --breakpoint-grid_auto-rows, minmax(-webkit-min-content,-webkit-max-content) );
+    grid-auto-rows: var( --breakpoint-grid_auto-rows, minmax(min-content,max-content) );
+    grid-gap: 40px 24px; /*可変var*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.pic-elements{
+    display: flex;
+}
+
+.pic-elements a{
+    min-width: 100%;
+}

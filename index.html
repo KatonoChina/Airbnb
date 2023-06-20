@@ -1,0 +1,1613 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AirBnb</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+
+    <body id="body">
+        <div class="wrapper" id="wrapper">
+
+            <header>
+                <div class="header-elements">
+                    <div class="header-left">
+                        <div class="header-left-box">
+                            <a class="logo-box" href="#body">
+                                <div class="logo-icon">
+                                    <img src="img/logo_icon.png" alt="ロゴマーク">
+                                </div><!--.logo-icon-->
+                                <div class="logo-letter">
+                                    <img src="img/logo_letter.png" alt="文字ロゴ">
+                                </div><!--.logo-letter-->
+                                
+                            </a>
+                        </div><!--.header-left-box-->
+
+                    </div><!--.header-left-->
+                    <div class="header-center">
+                        <div class="header-center-box">
+                            <button class="btn-where btn-s" id="btn-where" >
+                                <div class="where">
+                                    どこでも
+                                </div><!--.where-->
+                            </button><!--.btn-where-->
+
+                            <span class="btn-border"></span><!--.btn-border-->
+
+                            <button class="btn-when btn-s" id="btn-when">
+                                <div class="when">
+                                    週の指定なし
+                                </div><!--.when-->
+                            </button><!--.btn-when-->
+
+                            <span class="btn-border"></span><!--.btn-border-->
+
+                            <div class="btns-numbsearch">
+                                <button class="btn-number btn-s" id="btn-number">
+                                    <div class="number">
+                                        ゲスト数を追加
+                                    </div><!--.number-->
+                                </button>
+                                <button class="btn-search">
+                                    <div class="search-icon btn-s">
+                                        <img src="img/search_icon.png" alt="サーチアイコン">
+                                    </div><!--.search-icon-->
+                                </button><!--.btn-search-->
+                            </div><!--.btns-numbsearch-->
+                        </div><!--.header-center-box-->
+                        <div class="hide-searchbox-a" id="hide-searchbox-a">
+                            <div class="hide-searchbox-b">
+                                <form class="hide-searchbox-c">
+                                    <div class="hide-box1-a">
+                                        <div class="hide-box1-b">
+                                            <div class="hide-box1-left">
+                                                <div class="btn-genre-stay-a">
+                                                    <div class="btn-genre-stay-b">                                                      
+                                                        宿泊
+                                                    </div><!--.btn-genre-stay-b-->
+                                                </div><!--.btn-genre-stay-a-->
+                                                <div class="btn-genre-experience-a">
+                                                    <div class="btn-genre-experience-b">
+                                                        体験
+                                                    </div><!--.btn-genre-experience-b-->
+                                                </div><!--.btn-genre-experience-a-->
+                                            </div><!--.hide-box1-a-l-->
+                                            <div class="hide-box1-right">
+                                                <div class="btn-online-experience-a">
+                                                    <a class="btn-online-experience-b" href="#">
+                                                        <div class="btn-online-experience-c">
+                                                            オンライン体験
+                                                        </div><!--.btn-online-experience-c-->
+                                                    </a><!--.btn-online-experience-b-->
+                                                </div><!--.btn-online-experience-a-->
+                                            </div><!--.hide-box1-a-r-->
+
+                                        </div><!--.hide-box1-b-->
+                                    </div><!--.hide-box1-a-->
+                                    <div class="hide-box2-a">
+                                        <div class="hide-box2-b">
+                                            <div class="location-box-a">
+                                                <div class="location-box-b btn-location">
+                                                    <label>
+                                                        <div>ロケーション</div>
+                                                        <input class="input-location" type="text" name="location" placeholder="目的地を検索">
+                                                    </label>
+                                                    <div class="submenu-location-a">
+                                                        <div class="submenu-location-b">
+                                                            <section class="submenu-location-c">
+                                                                <div class="submenu-location-d">
+                                                                    <div class="submenu-location-e">
+                                                                        <div class="submenu-location-f">
+                                                                            <div>地域で検索</div>
+                                                                            <div class="location-option-box-a">
+                                                                                <div class="location-option-box-b">
+                                                                                    <div class="location-option-a">
+                                                                                        <div class="location-option-b">
+                                                                                            <button class="location-option-btn">
+                                                                                                <img src="img/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" alt="世界地図">
+                                                                                            </button>
+                                                                                            <div>
+                                                                                                <div class="location-option-name">
+                                                                                                    柔軟な検索を試してみる
+                                                                                                </div>                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="location-option-a">
+                                                                                        <div class="location-option-b">
+                                                                                            <button class="location-option-btn">
+                                                                                                <img src="img/7b5cf816-6c16-49f8-99e5-cbc4adfd97e2.jpg" alt="世界地図">
+
+
+                                                                                            </button>
+                                                                                            <div>
+                                                                                                <div class="location-option-name">
+                                                                                                    ヨーロッパ
+                                                                                                </div>                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="location-option-a">
+                                                                                        <div class="location-option-b">
+                                                                                            <button class="location-option-btn">
+                                                                                                <img src="img/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" alt="世界地図">
+
+
+                                                                                            </button>
+                                                                                            <div>
+                                                                                                <div class="location-option-name">
+                                                                                                    フランス
+                                                                                                </div>                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="location-option-a">
+                                                                                        <div class="location-option-b">
+                                                                                            <button class="location-option-btn">
+                                                                                                <img src="img/4e762891-75a3-4fe1-b73a-cd7e673ba915.jpg" alt="世界地図">
+
+
+                                                                                            </button>
+                                                                                            <div>
+                                                                                                <div class="location-option-name">
+                                                                                                    米国
+                                                                                                </div>                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="location-option-a">
+                                                                                        <div class="location-option-b">
+                                                                                            <button class="location-option-btn">
+                                                                                                <img src="img/dbb2b5ef-2efe-4099-81ac-c7b957f384ed.jpg" alt="世界地図">
+
+
+                                                                                            </button>
+                                                                                            <div>
+                                                                                                <div class="location-option-name">
+                                                                                                    イギリス
+                                                                                                </div>                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="location-option-a">
+                                                                                        <div class="location-option-b">
+                                                                                            <button class="location-option-btn">
+                                                                                                <img src="img/06a30699-aead-492e-ad08-33ec0b383399.jpg" alt="世界地図">
+
+
+                                                                                            </button>
+                                                                                            <div>
+                                                                                                <div class="location-option-name">
+                                                                                                    南米
+                                                                                                </div>                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div><!--.submenu-location-f-->
+                                                                    </div><!--.submenu-location-e-->
+                                                                </div><!--.submenu-location-d-->
+                                                            </section><!--.submenu-location-c-->
+                                                        </div><!--.submenu-location-b-->
+                                                    </div><!--.submenu-location-a-->
+                                                    
+                                                </div><!--.location-box-b-->
+                                            </div><!--.location-box-a-->
+
+                                            <span class="btn-border2"></span><!--.btn-border2-->
+
+                                            <div class="date-box-a">
+                                                <div class="date-box-b">
+                                                    <div class="checkin-box-a">
+                                                        <div class="checkin-box-b">
+                                                            <div class="checkin-box-c btn-checkin">
+                                                                <div class="checkin-top">チェックイン</div>
+                                                                <div class="checkin-bottom-a">
+                                                                    日付を入力
+                                                                    <span class="plus1day">±1日</span>
+                                                                    <span class="plus2day">±2日</span>
+                                                                    <span class="plus3day">±3日</span>
+                                                                    <span class="plus7day">±7日</span>
+                                                                </div>
+                                                            </div><!--.checkin-box-c-->
+                                                        </div><!--.checkin-box-b-->
+                                                    </div><!--.checkin-box-a--> 
+
+                                                    <div class="submenu-date-a">
+                                                        <div class="submenu-date-b">
+                                                            <div class="submenu-date-c">
+                                                                <section class="submenu-date-d">
+                                                                    <div class="submenu-date-e">
+                                                                        <div class="submenu-date-f">
+                                                                            <div class="submenu-date-g">
+                                                                                <div class="submenu-date-h">
+                                                                                    <div class="date-option-a">
+                                                                                        <div class="date-option-b">
+                                                                                            <div class="date-option-c">
+                                                                                                <div class="date-option-d">
+                                                                                                    <button class="date-option-left">
+                                                                                                        日付を選択
+                                                                                                    </button>
+                                                                                                    <button class="date-option-right">
+                                                                                                        柔軟な日付設定
+                                                                                                    </button>
+                                                                                                </div><!--.date-option-d-->
+                                                                                            </div><!--.date-option-c-->
+                                                                                        </div><!--.date-option-b-->
+                                                                                    </div><!--.date-option-a-->
+                                                                                    <div class="date-calendar-box-a">
+                                                                                        <div class="date-calendar-box-b">
+                                                                                            <div class="date-calendar-box-c">
+                                                                                                <div class="date-calendar-a">
+                                                                                                    <div class="date-calendar-b">
+                                                                                                        <div class="date-calendar-c">
+                                                                                                            <div class="date-calendar-d">
+                                                                                                                <div class="date-calendar-e" style="width:800px">
+                                                                                                                    <div class="yobi-box" style="display:flex;">
+                                                                                                                        <div class="yobi-left">
+                                                                                                                            <ul class="yobi-list" style="list-style:none; display:flex;">
+                                                                                                                                <li>日</li>
+                                                                                                                                <li>月</li>
+                                                                                                                                <li>火</li>
+                                                                                                                                <li>水</li>
+                                                                                                                                <li>木</li>
+                                                                                                                                <li>金</li>
+                                                                                                                                <li>土</li>
+                                                                                                                            </ul>
+                                                                                                                        </div>
+                                                                                                                        <div class="yobi-right">
+                                                                                                                            <ul class="yobi-list" style="list-style:none; display:flex;">
+                                                                                                                                <li>日</li>
+                                                                                                                                <li>月</li>
+                                                                                                                                <li>火</li>
+                                                                                                                                <li>水</li>
+                                                                                                                                <li>木</li>
+                                                                                                                                <li>金</li>
+                                                                                                                                <li>土</li>
+                                                                                                                            </ul>
+                                                                                                                        </div>
+                                                                                                                    </div><!--.yobi-->
+                                                                                                                    <div class="calendar-list">
+                                                                                                                        <div class="btn-prevnext-box-a">
+                                                                                                                            <div class="btn-prevnext-box-b">
+                                                                                                                                <div class="btn-prev-a">
+                                                                                                                                    <button class="btn-prev-b">
+                                                                                                                                        <span>&#12296;</span>                                                                                                                                         </span>
+                                                                                                                                    </button>
+                                                                                                                                </div>
+                                                                                                                                <div class="btn-next-a">
+                                                                                                                                    <button class="btn-next-b">
+                                                                                                                                        <span>&#12297;</span>                                                                                                                                        
+                                                                                                                                    </button>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="calendar-slider-a">
+                                                                                                                            <div id="calendar" class="calendar-slider-b">
+                                                                                                                                
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="date-footer-a">
+                                                                                                    <div class="date-footer-b">
+                                                                                                        <div class="btn-date-correct-a">
+                                                                                                            <button class="btn-date-correct-b">
+                                                                                                                <div>
+                                                                                                                    正確な日付
+                                                                                                                </div>
+                                                                                                                <span>
+
+                                                                                                                </span>
+                                                                                                            </button>
+                                                                                                        </div>
+                                                                                                        <div class="btn-date-daysplus-a">
+                                                                                                            <button class="btn-date-daysplus-b dayplus-1">
+                                                                                                                <div>
+                                                                                                                    ±1日
+                                                                                                                </div>
+                                                                                                                <span>
+
+                                                                                                                </span>
+                                                                                                            </button>
+                                                                                                        </div>
+                                                                                                        <div class="btn-date-daysplus-a">
+                                                                                                            <button class="btn-date-daysplus-b dayplus-2">
+                                                                                                                <div>
+                                                                                                                    ±2日
+                                                                                                                </div>
+                                                                                                                <span>
+
+                                                                                                                </span>
+                                                                                                            </button>
+                                                                                                        </div>
+                                                                                                        <div class="btn-date-daysplus-a">
+                                                                                                            <button class="btn-date-daysplus-b dayplus-3">
+                                                                                                                <div>
+                                                                                                                    ±3日
+                                                                                                                </div>
+                                                                                                                <span>
+
+                                                                                                                </span>
+                                                                                                            </button>
+                                                                                                        </div>
+                                                                                                        <div class="btn-date-daysplus-a">
+                                                                                                            <button class="btn-date-daysplus-b dayplus-7">
+                                                                                                                <div>
+                                                                                                                    ±7日
+                                                                                                                </div>
+                                                                                                                <span>
+
+                                                                                                                </span>
+                                                                                                            </button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div><!--.date-calendar-box-c-->
+                                                                                        </div><!--.date-calendar-box-b-->
+                                                                                    </div><!--.date-calendar-box-a-->
+
+                                                                                </div><!--.submenu-date-h-->
+                                                                            </div><!--.submenu-date-g-->
+                                                                        </div><!--.submenu-date-f-->
+                                                                    </div><!--.submenu-date-e-->
+                                                                </section><!--.submenu-date-d-->
+                                                            </div><!--.submenu-date-c-->
+                                                        </div><!--.submenu-date-b-->
+                                                    </div><!--.submenu-date-a-->
+
+                                                    <span class="btn-border2"></span><!--.btn-border2-->
+
+                                                    <div class="checkout-box-a">
+                                                        <div class="checkout-box-b">
+                                                            <div class="checkout-box-c btn-checkout">
+                                                                <div class="checkout-top">チェックアウト</div>
+                                                                <div class="checkout-bottom-a">
+                                                                    日付を入力
+                                                                </div>
+                                                            </div><!--.checkout-box-c-->
+                                                        </div><!--.checkout-box-b-->
+                                                    </div><!--.checkout-box-a--> 
+                                                </div><!--.date-box-b-->
+                                            </div><!--.date-box-a-->
+
+                                            <span class="btn-border2"></span><!--.btn-border2-->
+
+                                            <div class="guestsearch-box-a btn-guestnumber">
+                                                <div class="guestsearch-box-b">
+                                                    <div class="guest-box-a">
+                                                        <div class="guest-box-b btn-guestnumber">
+                                                            <div class="guest-top">旅行者</div>
+                                                                <div class="guest-bottom-1">
+                                                                    ゲスト数を入力
+                                                                </div>
+                                                                <div class="guest-bottom-2">
+                                                                    <div class="guest-bottom-2-guest"></div>
+                                                                    <div class="guest-bottom-2-baby"></div>
+                                                                    <div class="guest-bottom-2-pet"></div>
+                                                                </div>
+                                                                
+                                                        </div><!--.guest-box-b-->
+                                                    </div><!--.guest-box-a--> 
+                                                    <div class="search-box-a">
+                                                        <button class="search-box-b">
+                                                            <span class="search-box-c">
+                                                                <div class="search-box-d">
+                                                                    <div class="mushimegane">鏡</div>
+                                                                    <div class="sagasu">探す</div>
+                                                                </div>                                                                
+                                                            <span>
+
+                                                        </button><!--.search-box-b-->
+                                                    </div><!--.search-box-a-->
+                                                </div><!--.guestsearch-box-b-->
+                                                <div class="submenu-guestnumber-a">
+                                                    <div class="submenu-guestnumber-b">
+                                                        <section class="submenu-guestnumber-c">
+                                                            <div class="submenu-guestnumber-d">
+                                                                <div class="submenu-guestnumber-e">
+                                                                    <div class="submenu-guestnumber-f">
+                                                                        <div class="adult-box">
+                                                                            <div class="adult-left">
+                                                                                <div class="adult-left-top">
+                                                                                    大人
+                                                                                </div>
+                                                                                <div class="adult-left-bottom">
+                                                                                    13歳以上
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="adult-right-a">
+                                                                                <div class="adult-right-b">
+                                                                                    <button id="btn_count_down_adult">
+                                                                                        <span>
+                                                                                            －
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <div>
+                                                                                        <span id="disp_count_adult">
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <button id="btn_count_up_adult">
+                                                                                        <span>
+                                                                                            ＋
+                                                                                        </span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="child-box">
+                                                                            <div class="child-left">
+                                                                                <div class="child-left-top">
+                                                                                    子ども
+                                                                                </div>
+                                                                                <div class="child-left-bottom">
+                                                                                    年齢2-12
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="child-right-a">
+                                                                                <div class="child-right-b">
+                                                                                    <button id="btn_count_down_child">
+                                                                                        <span>
+                                                                                            －
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <div>
+                                                                                        <span id="disp_count_child">
+
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <button id="btn_count_up_child">
+                                                                                        <span>
+                                                                                            ＋
+                                                                                        </span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="baby-box">
+                                                                            <div class="baby-left">
+                                                                                <div class="baby-left-top">
+                                                                                    乳幼児
+                                                                                </div>
+                                                                                <div class="baby-left-bottom">
+                                                                                    2歳未満
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="baby-right-a">
+                                                                                <div class="baby-right-b">
+                                                                                    <button id="btn_count_down_baby">
+                                                                                        <span>
+                                                                                            －
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <div>
+                                                                                        <span id="disp_count_baby">
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <button id="btn_count_up_baby">
+                                                                                        <span>
+                                                                                            ＋
+                                                                                        </span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="pet-box">
+                                                                            <div class="pet-left">
+                                                                                <div class="pet-left-top">
+                                                                                    ペット
+                                                                                </div>
+                                                                                <div class="pet-left-bottom">
+                                                                                    <button>
+                                                                                        介助動物同伴の場合は？
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="pet-right-a">
+                                                                                <div class="pet-right-b">
+                                                                                    <button id="btn_count_down_pet">
+                                                                                        <span>
+                                                                                            －
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <div>
+                                                                                        <span id="disp_count_pet">
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <button id="btn_count_up_pet">
+                                                                                        <span>
+                                                                                            ＋
+                                                                                        </span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </div><!--.guestsearch-box-a-->
+
+                                        </div><!--.hide-box2-b-->
+                                    </div><!--.hide-box2-a-->
+                                </form><!--.header-searchbox-c-->
+                            </div><!--.header-searchbox-b-->
+                        </div><!--.header-searchbox-a-->
+
+                    </div><!--.header-center-->
+                    <div class="header-right">
+                        <div class="header-right-box submenu-close">
+                            <div class="btns-hostlang">
+                                <div class="btn-host">
+                                    <a>
+                                        <div>
+                                            Airbnbにお部屋を掲載
+                                        </div>
+                                    </a>                                
+                                </div><!--.btn-host-->
+                                <div class="btn-language">
+                                    <a>
+                                        <div class="lang-icon">
+                                            <img src="img/lang_icon.png" alt="ランゲージアイコン">
+                                        </div><!--.lang-icon-->
+                                    </a>
+                                </div><!--.btn-language-->
+                            </div><!--btns-hostlang-->
+
+                            <div class="btn-prof">
+                                <a>
+                                    <div class="mypage">
+                                        <div class="menu-icon">
+                                            <img src="img/menu_bar.png" alt="メニューバーアイコン">
+                                        </div><!--.menu-icon-->
+                                        <div class="prof-icon">
+                                            <img src="img/prof_icon.png" alt="プロフィールアイコン">
+                                        </div><!--.prof-icon-->
+                                    </div><!--.mypage-->
+                                </a>
+                            </div><!--.btn-prof-->
+                        </div><!--.header-right-box-->
+
+                    </div><!--.header-right-->
+
+                </div><!--.header-elements-->
+            </header>
+
+            <div class="header-background"></div>
+
+            <div class="nav-bar">
+                <div class="nav-inner-bar">
+                    <div class="nav-bar-left">
+                        <div class="sliderArea">
+                            <ul class="nav slider">
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                最高の眺め
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/827c5623-d182-474a-823c-db3894490896.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                旅館
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+                                
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                スゴイ！
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                素敵なプール
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                個室
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                ログハウス
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                大邸宅・屋敷
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+
+                                <li>
+                                    <div class="nav-option">
+                                        <div>
+                                            <img src="img/50861fca-582c-4bcc-89d3-857fb7ca6528.jpg" alt="眺めアイコン">
+                                        </div>
+                                        <div>
+                                            <div class="op-cont">
+                                                洗練されたデザイン
+                                            </div><!--.op-cont-->
+                                        </div>
+                                    </div><!--.nav-option-->
+                                </li>
+  
+
+
+
+                            </ul><!--.nav slider-->
+                        </div><!--.sliderArea-->
+                    </div><!--.nav-bar-left-->
+
+                    <div class="nav-bar-right">
+                        <button class="btn-filter">
+                            <div class="filter-icon">
+                                <img src="img/filter_icon.png" alt="フィルターアイコン">
+                            </div><!--.filter-icon-->
+                            <div class="filter">
+                                フィルター
+                            </div><!--.filter-->
+                        </button>
+                    </div><!--.nav-bar-right-->
+                </div><!--.nav-inner-bar-->
+            </div><!--.nav-bar-->
+
+            <div class="bottom-bar-map-a">
+                <div class="bottom-bar-map-b">
+
+                </div>
+            </div>
+
+            <main class="main-a">
+                <div class="main-b">
+                    <div class="main-c">
+                        <div class="main-d">
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-box-c">
+                                                            <div class="pic-hover-top-a">
+                                                                <div class="pic-hover-top-left"></div>
+                                                                <div class="pic-hover-top-right-a">
+                                                                    <div class="pic-hover-top-right-b">
+                                                                        <button class="pic-hover-top-right-c">
+                                                                            ♡
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--.pic-hover-top-a-->
+                                                            <div class="pic-hover-middle-a">
+                                                                <div class="pic-hover-middle-prev-a">
+                                                                    <div class="pic-hover-middle-prev-b">
+                                                                        <button class="pic-hover-middle-prev-c">
+                                                                            <span class="pic-hover-middle-prev-d">
+                                                                                ←
+                                                                            </span>                                         
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-prev-b-->
+                                                                </div><!--.pic-hover-middle-prev-a-->
+                                                                <div class="pic-hover-middle-next-a">
+                                                                    <div class="pic-hover-middle-next-b">
+                                                                        <button class="pic-hover-middle-next-c">
+                                                                            <span class="pic-hover-middle-next-d">
+                                                                                →
+                                                                            </span>      
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-next-b-->
+                                                                </div><!--.pic-hover-middle-next-a-->
+                                                            </div><!--.pic-hover-middle-a-->
+                                                            <div class="pic-hover-bottom-a">
+                                                                <div class="pic-hover-bottom-left"></div>
+                                                                <div class="pic-hover-bottom-center-a">
+                                                                    <div class="pic-hover-bottom-center-b">
+                                                                        <div class="pic-hover-bottom-center-c">
+                                                                            <div class="pic-hover-bottom-center-d">
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                                <div class="pic-hover-bottom-right"></div>
+                                                            </div><!--.pic-hover-bottom-a-->
+
+                                                        </div><!--.pic-hover-bpx-c-->
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-box-c">
+                                                            <div class="pic-hover-top-a">
+                                                                <div class="pic-hover-top-left"></div>
+                                                                <div class="pic-hover-top-right-a">
+                                                                    <div class="pic-hover-top-right-b">
+                                                                        <button class="pic-hover-top-right-c">
+                                                                            ♡
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--.pic-hover-top-a-->
+                                                            <div class="pic-hover-middle-a">
+                                                                <div class="pic-hover-middle-prev-a">
+                                                                    <div class="pic-hover-middle-prev-b">
+                                                                        <button class="pic-hover-middle-prev-c">
+                                                                            左
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-prev-b-->
+                                                                </div><!--.pic-hover-middle-prev-a-->
+                                                                <div class="pic-hover-middle-next-a">
+                                                                    <div class="pic-hover-middle-next-b">
+                                                                        <button class="pic-hover-middle-next-c">
+                                                                            右
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-next-b-->
+                                                                </div><!--.pic-hover-middle-next-a-->
+                                                            </div><!--.pic-hover-middle-a-->
+                                                            <div class="pic-hover-bottom-a">
+                                                                <div class="pic-hover-bottom-left"></div>
+                                                                <div class="pic-hover-bottom-center-a">
+                                                                    <div class="pic-hover-bottom-center-b">
+                                                                        <div class="pic-hover-bottom-center-c">
+                                                                            <div class="pic-hover-bottom-center-d">
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                                <div class="pic-hover-bottom-right"></div>
+                                                            </div><!--.pic-hover-bottom-a-->
+
+                                                        </div><!--.pic-hover-bpx-c-->
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-box-c">
+                                                            <div class="pic-hover-top-a">
+                                                                <div class="pic-hover-top-left"></div>
+                                                                <div class="pic-hover-top-right-a">
+                                                                    <div class="pic-hover-top-right-b">
+                                                                        <button class="pic-hover-top-right-c">
+                                                                            ♡
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--.pic-hover-top-a-->
+                                                            <div class="pic-hover-middle-a">
+                                                                <div class="pic-hover-middle-prev-a">
+                                                                    <div class="pic-hover-middle-prev-b">
+                                                                        <button class="pic-hover-middle-prev-c">
+                                                                            左
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-prev-b-->
+                                                                </div><!--.pic-hover-middle-prev-a-->
+                                                                <div class="pic-hover-middle-next-a">
+                                                                    <div class="pic-hover-middle-next-b">
+                                                                        <button class="pic-hover-middle-next-c">
+                                                                            右
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-next-b-->
+                                                                </div><!--.pic-hover-middle-next-a-->
+                                                            </div><!--.pic-hover-middle-a-->
+                                                            <div class="pic-hover-bottom-a">
+                                                                <div class="pic-hover-bottom-left"></div>
+                                                                <div class="pic-hover-bottom-center-a">
+                                                                    <div class="pic-hover-bottom-center-b">
+                                                                        <div class="pic-hover-bottom-center-c">
+                                                                            <div class="pic-hover-bottom-center-d">
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                                <div class="pic-hover-bottom-right"></div>
+                                                            </div><!--.pic-hover-bottom-a-->
+
+                                                        </div><!--.pic-hover-bpx-c-->
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-box-c">
+                                                            <div class="pic-hover-top-a">
+                                                                <div class="pic-hover-top-left"></div>
+                                                                <div class="pic-hover-top-right-a">
+                                                                    <div class="pic-hover-top-right-b">
+                                                                        <button class="pic-hover-top-right-c">
+                                                                            ♡
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--.pic-hover-top-a-->
+                                                            <div class="pic-hover-middle-a">
+                                                                <div class="pic-hover-middle-prev-a">
+                                                                    <div class="pic-hover-middle-prev-b">
+                                                                        <button class="pic-hover-middle-prev-c">
+                                                                            左
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-prev-b-->
+                                                                </div><!--.pic-hover-middle-prev-a-->
+                                                                <div class="pic-hover-middle-next-a">
+                                                                    <div class="pic-hover-middle-next-b">
+                                                                        <button class="pic-hover-middle-next-c">
+                                                                            右
+                                                                        </button>
+                                                                    </div><!--.pic-hover-middle-next-b-->
+                                                                </div><!--.pic-hover-middle-next-a-->
+                                                            </div><!--.pic-hover-middle-a-->
+                                                            <div class="pic-hover-bottom-a">
+                                                                <div class="pic-hover-bottom-left"></div>
+                                                                <div class="pic-hover-bottom-center-a">
+                                                                    <div class="pic-hover-bottom-center-b">
+                                                                        <div class="pic-hover-bottom-center-c">
+                                                                            <div class="pic-hover-bottom-center-d">
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                                <span class="pic-hover-bottom-maru">●</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                                <div class="pic-hover-bottom-right"></div>
+                                                            </div><!--.pic-hover-bottom-a-->
+
+                                                        </div><!--.pic-hover-bpx-c-->
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-top-a">
+                                                            右上♡マーク
+                                                        </div><!--.pic-hover-top-a-->
+                                                        <div class="pic-hover-middle-a">
+                                                            <div class="pic-hover-middle-prev-a">
+                                                                <div class="pic-hover-middle-prev-b">
+                                                                    <button class="pic-hover-middle-prev-c">
+                                                                        左
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-prev-b-->
+                                                            </div><!--.pic-hover-middle-prev-a-->
+                                                            <div class="pic-hover-middle-next-a">
+                                                                <div class="pic-hover-middle-next-b">
+                                                                    <button class="pic-hover-middle-next-c">
+                                                                        右
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-next-b-->
+                                                            </div><!--.pic-hover-middle-next-a-->
+                                                        </div><!--.pic-hover-middle-a-->
+                                                        <div class="pic-hover-bottom-a">
+                                                            <div class="pic-hover-bottom-left"></div>
+                                                            <div class="pic-hover-bottom-center-a">
+                                                                <div class="pic-hover-bottom-center-b">
+                                                                    <div class="pic-hover-bottom-center-c">
+                                                                        <div class="pic-hover-bottom-center-d">
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                                                    
+                                                            </div>
+                                                            <div class="pic-hover-bottom-right"></div>
+                                                        </div><!--.pic-hover-bottom-a-->
+
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-top-a">
+                                                            右上♡マーク
+                                                        </div><!--.pic-hover-top-a-->
+                                                        <div class="pic-hover-middle-a">
+                                                            <div class="pic-hover-middle-prev-a">
+                                                                <div class="pic-hover-middle-prev-b">
+                                                                    <button class="pic-hover-middle-prev-c">
+                                                                        左
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-prev-b-->
+                                                            </div><!--.pic-hover-middle-prev-a-->
+                                                            <div class="pic-hover-middle-next-a">
+                                                                <div class="pic-hover-middle-next-b">
+                                                                    <button class="pic-hover-middle-next-c">
+                                                                        右
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-next-b-->
+                                                            </div><!--.pic-hover-middle-next-a-->
+                                                        </div><!--.pic-hover-middle-a-->
+                                                        <div class="pic-hover-bottom-a">
+                                                            <div class="pic-hover-bottom-left"></div>
+                                                            <div class="pic-hover-bottom-center-a">
+                                                                <div class="pic-hover-bottom-center-b">
+                                                                    <div class="pic-hover-bottom-center-c">
+                                                                        <div class="pic-hover-bottom-center-d">
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                                                    
+                                                            </div>
+                                                            <div class="pic-hover-bottom-right"></div>
+                                                        </div><!--.pic-hover-bottom-a-->
+
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-top-a">
+                                                            右上♡マーク
+                                                        </div><!--.pic-hover-top-a-->
+                                                        <div class="pic-hover-middle-a">
+                                                            <div class="pic-hover-middle-prev-a">
+                                                                <div class="pic-hover-middle-prev-b">
+                                                                    <button class="pic-hover-middle-prev-c">
+                                                                        左
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-prev-b-->
+                                                            </div><!--.pic-hover-middle-prev-a-->
+                                                            <div class="pic-hover-middle-next-a">
+                                                                <div class="pic-hover-middle-next-b">
+                                                                    <button class="pic-hover-middle-next-c">
+                                                                        右
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-next-b-->
+                                                            </div><!--.pic-hover-middle-next-a-->
+                                                        </div><!--.pic-hover-middle-a-->
+                                                        <div class="pic-hover-bottom-a">
+                                                            <div class="pic-hover-bottom-left"></div>
+                                                            <div class="pic-hover-bottom-center-a">
+                                                                <div class="pic-hover-bottom-center-b">
+                                                                    <div class="pic-hover-bottom-center-c">
+                                                                        <div class="pic-hover-bottom-center-d">
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                                                    
+                                                            </div>
+                                                            <div class="pic-hover-bottom-right"></div>
+                                                        </div><!--.pic-hover-bottom-a-->
+
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            <div class="hotel-box-a">
+                                <div class="hotel-box-b">
+                                    <div class="hotel-pic-box-a">
+                                        <div class="hotel-pic-box-b">
+                                            <div class="hotel-pic-box-c">
+                                                <div class="pic-hover-box-a">
+                                                    <div class="pic-hover-box-b">
+                                                        <div class="pic-hover-top-a">
+                                                            右上♡マーク
+                                                        </div><!--.pic-hover-top-a-->
+                                                        <div class="pic-hover-middle-a">
+                                                            <div class="pic-hover-middle-prev-a">
+                                                                <div class="pic-hover-middle-prev-b">
+                                                                    <button class="pic-hover-middle-prev-c">
+                                                                        左
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-prev-b-->
+                                                            </div><!--.pic-hover-middle-prev-a-->
+                                                            <div class="pic-hover-middle-next-a">
+                                                                <div class="pic-hover-middle-next-b">
+                                                                    <button class="pic-hover-middle-next-c">
+                                                                        右
+                                                                    </button>
+                                                                </div><!--.pic-hover-middle-next-b-->
+                                                            </div><!--.pic-hover-middle-next-a-->
+                                                        </div><!--.pic-hover-middle-a-->
+                                                        <div class="pic-hover-bottom-a">
+                                                            <div class="pic-hover-bottom-left"></div>
+                                                            <div class="pic-hover-bottom-center-a">
+                                                                <div class="pic-hover-bottom-center-b">
+                                                                    <div class="pic-hover-bottom-center-c">
+                                                                        <div class="pic-hover-bottom-center-d">
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                            <span class="pic-hover-bottom-maru">●</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                                                    
+                                                            </div>
+                                                            <div class="pic-hover-bottom-right"></div>
+                                                        </div><!--.pic-hover-bottom-a-->
+
+                                                    </div><!--.pic-hover-bpx-b-->
+                                                </div><!--.pic-hover-box-a-->
+                                                <div class="pics-slider-container-a">
+                                                    <div class="pics-slider-container-b">
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/0e15bc0a-27e8-44d0-a18e-aabc997c9b53.jpg">
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/1d593a62-5dc3-413b-b27d-45bd682b8efa.jpg">
+                                                            
+                                                        </a>
+                                                        <a class="hotel-pic" href="#">
+                                                            <img class="hotel-pic-b" src="img/02d72fa2-c584-4f38-9a28-945837c9c329.jpg">
+                                                            
+                                                        </a>
+                                                    </div><!--.pics-slider-container-b-->
+                                                </div><!--.pics-slider-container-a-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-information-a">
+                                        <div class="hotel-information-1">
+                                            ケープタウン、南アフリカ
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                9週間前に掲載
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                3月28日～4月2日
+                                            </span>
+                                        </div>
+                                        <div class="hotel-information-2">
+                                            <span>
+                                                ¥&nbsp;90,361
+                                                &nbsp;
+                                            </span>
+
+                                        </div>
+                                        <span class="stars">
+                                            ★5.0
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div><!--.hotel-box-a-->
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
+            <footer>
+                <div class="footer-box-a">
+                    <div class="footer-box-b">
+                        <div class="footer-box-c">
+                            <div class="footer-contents">
+                                <section>
+                                    <div>
+                                        <h3>サポート</h3>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">ヘルプセンター</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">AirCover</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">障害のある方へのサポート</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">キャンセルオプション</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Airbnbの新型コロナウイルスに対する取り組み</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">近隣トラブルを報告する</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <div>
+                                        <h3>コミュニティ</h3>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Airbnb.org：災害発生時の滞在先</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">差別に対する取り組み</a>
+                                        </li>                                        
+                                    </ul>
+                                </section>
+                                <section>
+                                    <div>
+                                        <h3>ホスティング</h3>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Airbnbにお部屋を掲載する</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ホストのためのAirCover</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ホスト向けリソースを確認</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">コミュニティフォーラムへ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">責任をもってホスティングする方法</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <div>
+                                        <h3>Airbnb</h3>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">ニュースルーム</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">新機能のご紹介r</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Airbnb創業者からの手紙</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">採用情報</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">株主・投資家のみなさまへ</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div><!--.footer-contents-->
+                            <div class="footer-bottom-a">
+                                <section class="footer-bottom-b">
+                                    <div class="footer-bottom-c">
+                                        <div>
+
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                    </div><!--.footer-bottom-c-->
+                                </section><!--.footer-bottom-b-->                                
+                            </div><!--.footer-bottom-a-->
+                        </div><!--.footer-box-c-->
+                    </div><!--.footer-box-b-->
+                </div><!--.footer-box-a-->
+            </footer>
+        </div><!--.wrapper-->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
