@@ -563,7 +563,6 @@ const guestNumberCount = function() {
             count_value_adult -= 1;
           }
         count_disp_adult.innerHTML = count_value_adult;
-        
     };
    
 
@@ -574,7 +573,6 @@ const guestNumberCount = function() {
     count_up_btn_child.onclick = function (){
        count_value_child += 1;
        count_disp_child.innerHTML = count_value_child;
-       
     };
     
     count_down_btn_child.onclick = function (){
@@ -582,7 +580,6 @@ const guestNumberCount = function() {
            count_value_child -= 1;
          }
        count_disp_child.innerHTML = count_value_child;
-       
     };
 
 
@@ -650,10 +647,27 @@ const guestNumberCount = function() {
 
 guestNumberCount();
 
-
-
-
-
-
 //--------------------------↑ここまでsubmenu-guestnumber--------------------------//
 
+
+//--------------------------↓ここからnuv-bar スクロールボタン--------------------------//
+
+// オブジェクトと変数の準備
+const count_nav_scroll_left = document.querySelector('.nav-bar-left__scroll-btn--left');
+const count_nav_scroll_right = document.querySelector('.nav-bar-left__scroll-btn--right'); 
+const nav_bar = document.querySelector('.nav-slider-list'); 
+
+var count_up_navScroll = 0;
+var count_down_navScroll = 0;
+
+const navBarScroll = function() {
+
+    count_nav_scroll_right.onclick = function (){
+        count_up_navScroll += 1;
+        target.style.backgroundColor="#4040FF";
+
+        nav_bar.style.transform = 'translateX(50px)';  
+        // 230620メモ　buttonクリック反応してない
+    };
+
+}

@@ -1175,12 +1175,15 @@ section{
 .nav-bar-left__scroll-btn{
     padding: 0 0 0 0;
     position: relative;
+    cursor: pointer;
 }
 .nav-bar-left__scroll-btn--left{
     left:8px;
 }
 .nav-bar-left__scroll-btn--right{
     right:8px;
+    position: absolute;
+    top: 30%;
 }
 .nav-bar-left__scroll-btn::before {
     content: "";
@@ -1195,15 +1198,16 @@ section{
     margin-top: -4px;
     border-top: solid 2.5px #333;
     border-right: solid 2.5px #333;
+    pointer-events: none;
 }
 .nav-bar-left__scroll-btn--left::before {
     left: 0;
-    margin-left: 3.5px;
+    margin-left: 4px;
     transform: rotate(225deg);
 }
 .nav-bar-left__scroll-btn--right::before {
     right: 0;
-    margin-right: 3.5px;
+    margin-right: 4px;
     transform: rotate(45deg);
 }
 .nav-bar-left__scroll-btn::after {
@@ -1218,6 +1222,7 @@ section{
     background: #fff;
     z-index: 1;
     border: solid 0.8px #aaa;
+    pointer-events: none;
 }
 .nav-bar-left__scroll-btn--left::after {
     left: -8px;
