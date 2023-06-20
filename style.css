@@ -183,6 +183,7 @@ header{
 
 .search-icon{
     width:2.4em;
+    padding-right: 8px;
 }
 
 .btn-border{
@@ -1125,15 +1126,23 @@ section{
 }
 
 /*----↓ここからnav-bar-left----*/
-
+.nav-bar-left{
+    width: calc(100% - 100px);
+    overflow-x: scroll;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+.nav-bar-left::-webkit-scrollbar{
+    display: none;
+  }
 .nav{
     box-sizing: border-box;
     display: flex;
     align-items: center;
     list-style: none;
-    height:78px;
+    padding-bottom: 3px;
 }
-
 .nav-option{
     display: flex;
     flex-direction: column;
@@ -1141,8 +1150,14 @@ section{
     padding: 4px 0 14px;
     margin: 12px 0 0;
     margin-right:32px;
+    opacity: 0.6425339366515838;
+    cursor: pointer;
+    transition: 0.1s;
+    position: relative;
 }
-
+.nav-option:hover{
+    opacity: 1;
+}
 .nav-option img{
     width:24px;
     margin-bottom:8px;
@@ -1156,28 +1171,35 @@ section{
     font-size: 12px;
     min-width: 56px;
 }
-
-
-
-
-/*
-.nav-option{
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-rows:;
-    gap:;
-
-
-    font-weight: bold;
-}
-
-.nav-option{
-    grid-column:;
-    grid-row:;
-}*/
-
 /*----↑ここまでnav-bar-left----*/
 
+/*----↓ここからnav-bar-right----*/
+.nav-bar-right{
+    --chipsbar_separator-height: 32px;
+    display: grid;
+    flex: 0 0 auto;
+    min-width: calc(48px + 24px);
+    place-items: center;
+    position: relative;
+    padding-left: 24px;
+}
+.btn-filter{
+    display: flex;
+    padding: 16px;
+    border: solid 1px #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.filter-icon{
+    width: 1rem;
+}
+.filter{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    transform: translateY(1px);
+}
+/*----↑ここまでnav-bar-right----*/
 
 /*============↑ここまでnav-bar============*/
 
