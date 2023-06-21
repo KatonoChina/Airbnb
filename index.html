@@ -211,7 +211,7 @@
                                                             <div class="checkin-box-c btn-checkin">
                                                                 <div class="checkin-top">チェックイン</div>
                                                                 <div class="checkin-bottom-a">
-                                                                    日付を入力
+                                                                    日付を入力<span class="check-in-day_disp"></span>
                                                                     <span class="plus1day">±1日</span>
                                                                     <span class="plus2day">±2日</span>
                                                                     <span class="plus3day">±3日</span>
@@ -279,13 +279,11 @@
                                                                                                                         <div class="btn-prevnext-box-a">
                                                                                                                             <div class="btn-prevnext-box-b">
                                                                                                                                 <div class="btn-prev-a">
-                                                                                                                                    <button class="btn-prev-b">
-                                                                                                                                        <span>&#12296;</span>                                                                                                                                         </span>
+                                                                                                                                    <button class="btn-prev-b">                                                                                                                                    </span>
                                                                                                                                     </button>
                                                                                                                                 </div>
                                                                                                                                 <div class="btn-next-a">
-                                                                                                                                    <button class="btn-next-b">
-                                                                                                                                        <span>&#12297;</span>                                                                                                                                        
+                                                                                                                                    <button class="btn-next-b">                                                                                                                                   
                                                                                                                                     </button>
                                                                                                                                 </div>
                                                                                                                             </div>
@@ -598,7 +596,7 @@
                 <div class="nav-inner-bar">
                     <div class="nav-bar-left">
                         <div class="nav-bar-left__scroll-btn-wrap nav-bar-left__scroll-btn-wrap--left">
-                            <button class="nav-bar-left__scroll-btn nav-bar-left__scroll-btn--left">
+                            <button id="nav_scroll-btn--left" class="nav-bar-left__scroll-btn nav-bar-left__scroll-btn--left">
                             </button>
                         </div>
                         
@@ -1205,7 +1203,7 @@
                         </div><!--.sliderArea-->
 
                         <div class="nav-bar-left__scroll-btn-wrap nav-bar-left__scroll-btn-wrap--right">
-                            <button class="nav-bar-left__scroll-btn nav-bar-left__scroll-btn--right">
+                            <button id="nav_scroll-btn--right" class="nav-bar-left__scroll-btn nav-bar-left__scroll-btn--right">
                             </button>
                         </div>
                     </div><!--.nav-bar-left-->
@@ -1255,18 +1253,14 @@
                                                                 <div class="pic-hover-middle-prev-a">
                                                                     <div class="pic-hover-middle-prev-b">
                                                                         <button class="pic-hover-middle-prev-c">
-                                                                            <span class="pic-hover-middle-prev-d">
-                                                                                ←
-                                                                            </span>                                         
+                                                                                                                 
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-prev-b-->
                                                                 </div><!--.pic-hover-middle-prev-a-->
                                                                 <div class="pic-hover-middle-next-a">
                                                                     <div class="pic-hover-middle-next-b">
                                                                         <button class="pic-hover-middle-next-c">
-                                                                            <span class="pic-hover-middle-next-d">
-                                                                                →
-                                                                            </span>      
+                                                                               
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-next-b-->
                                                                 </div><!--.pic-hover-middle-next-a-->
@@ -1322,8 +1316,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>
@@ -1359,14 +1353,14 @@
                                                                 <div class="pic-hover-middle-prev-a">
                                                                     <div class="pic-hover-middle-prev-b">
                                                                         <button class="pic-hover-middle-prev-c">
-                                                                            左
+                                                                            
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-prev-b-->
                                                                 </div><!--.pic-hover-middle-prev-a-->
                                                                 <div class="pic-hover-middle-next-a">
                                                                     <div class="pic-hover-middle-next-b">
                                                                         <button class="pic-hover-middle-next-c">
-                                                                            右
+                                                                            
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-next-b-->
                                                                 </div><!--.pic-hover-middle-next-a-->
@@ -1422,8 +1416,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>
@@ -1459,14 +1453,14 @@
                                                                 <div class="pic-hover-middle-prev-a">
                                                                     <div class="pic-hover-middle-prev-b">
                                                                         <button class="pic-hover-middle-prev-c">
-                                                                            左
+                                                                            
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-prev-b-->
                                                                 </div><!--.pic-hover-middle-prev-a-->
                                                                 <div class="pic-hover-middle-next-a">
                                                                     <div class="pic-hover-middle-next-b">
                                                                         <button class="pic-hover-middle-next-c">
-                                                                            右
+                                                                            
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-next-b-->
                                                                 </div><!--.pic-hover-middle-next-a-->
@@ -1522,8 +1516,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>
@@ -1559,14 +1553,14 @@
                                                                 <div class="pic-hover-middle-prev-a">
                                                                     <div class="pic-hover-middle-prev-b">
                                                                         <button class="pic-hover-middle-prev-c">
-                                                                            左
+                                                                            
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-prev-b-->
                                                                 </div><!--.pic-hover-middle-prev-a-->
                                                                 <div class="pic-hover-middle-next-a">
                                                                     <div class="pic-hover-middle-next-b">
                                                                         <button class="pic-hover-middle-next-c">
-                                                                            右
+                                                                            
                                                                         </button>
                                                                     </div><!--.pic-hover-middle-next-b-->
                                                                 </div><!--.pic-hover-middle-next-a-->
@@ -1622,8 +1616,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>
@@ -1645,20 +1639,20 @@
                                                 <div class="pic-hover-box-a">
                                                     <div class="pic-hover-box-b">
                                                         <div class="pic-hover-top-a">
-                                                            右上♡マーク
+                                                            上♡マーク
                                                         </div><!--.pic-hover-top-a-->
                                                         <div class="pic-hover-middle-a">
                                                             <div class="pic-hover-middle-prev-a">
                                                                 <div class="pic-hover-middle-prev-b">
                                                                     <button class="pic-hover-middle-prev-c">
-                                                                        左
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-prev-b-->
                                                             </div><!--.pic-hover-middle-prev-a-->
                                                             <div class="pic-hover-middle-next-a">
                                                                 <div class="pic-hover-middle-next-b">
                                                                     <button class="pic-hover-middle-next-c">
-                                                                        右
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-next-b-->
                                                             </div><!--.pic-hover-middle-next-a-->
@@ -1713,8 +1707,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>
@@ -1736,20 +1730,20 @@
                                                 <div class="pic-hover-box-a">
                                                     <div class="pic-hover-box-b">
                                                         <div class="pic-hover-top-a">
-                                                            右上♡マーク
+                                                            上♡マーク
                                                         </div><!--.pic-hover-top-a-->
                                                         <div class="pic-hover-middle-a">
                                                             <div class="pic-hover-middle-prev-a">
                                                                 <div class="pic-hover-middle-prev-b">
                                                                     <button class="pic-hover-middle-prev-c">
-                                                                        左
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-prev-b-->
                                                             </div><!--.pic-hover-middle-prev-a-->
                                                             <div class="pic-hover-middle-next-a">
                                                                 <div class="pic-hover-middle-next-b">
                                                                     <button class="pic-hover-middle-next-c">
-                                                                        右
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-next-b-->
                                                             </div><!--.pic-hover-middle-next-a-->
@@ -1804,8 +1798,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>
@@ -1827,20 +1821,20 @@
                                                 <div class="pic-hover-box-a">
                                                     <div class="pic-hover-box-b">
                                                         <div class="pic-hover-top-a">
-                                                            右上♡マーク
+                                                            上♡マーク
                                                         </div><!--.pic-hover-top-a-->
                                                         <div class="pic-hover-middle-a">
                                                             <div class="pic-hover-middle-prev-a">
                                                                 <div class="pic-hover-middle-prev-b">
                                                                     <button class="pic-hover-middle-prev-c">
-                                                                        左
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-prev-b-->
                                                             </div><!--.pic-hover-middle-prev-a-->
                                                             <div class="pic-hover-middle-next-a">
                                                                 <div class="pic-hover-middle-next-b">
                                                                     <button class="pic-hover-middle-next-c">
-                                                                        右
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-next-b-->
                                                             </div><!--.pic-hover-middle-next-a-->
@@ -1895,8 +1889,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>
@@ -1918,20 +1912,20 @@
                                                 <div class="pic-hover-box-a">
                                                     <div class="pic-hover-box-b">
                                                         <div class="pic-hover-top-a">
-                                                            右上♡マーク
+                                                            上♡マーク
                                                         </div><!--.pic-hover-top-a-->
                                                         <div class="pic-hover-middle-a">
                                                             <div class="pic-hover-middle-prev-a">
                                                                 <div class="pic-hover-middle-prev-b">
                                                                     <button class="pic-hover-middle-prev-c">
-                                                                        左
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-prev-b-->
                                                             </div><!--.pic-hover-middle-prev-a-->
                                                             <div class="pic-hover-middle-next-a">
                                                                 <div class="pic-hover-middle-next-b">
                                                                     <button class="pic-hover-middle-next-c">
-                                                                        右
+                                                                        
                                                                     </button>
                                                                 </div><!--.pic-hover-middle-next-b-->
                                                             </div><!--.pic-hover-middle-next-a-->
@@ -1986,8 +1980,8 @@
                                                 3月28日～4月2日
                                             </span>
                                         </div>
-                                        <div class="hotel-information-2">
-                                            <span>
+                                        <div class="hotel-information-3">
+                                            <span class="hotel-information_price">
                                                 ¥&nbsp;90,361
                                                 &nbsp;
                                             </span>

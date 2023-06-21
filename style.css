@@ -628,7 +628,6 @@ section{
     width: 12px;
     display: block;
     fill: currentcolor;
-    background-color: beige;
 }
 
 .btn-prev-b{
@@ -639,7 +638,6 @@ section{
     width: 30px;
     height: 30px;
     cursor: pointer;
-    background-color: #ff385c;
     border-radius: 50%;
     text-align: center;
 }
@@ -650,7 +648,6 @@ section{
     width: 30px;
     height: 30px;
     cursor: pointer;
-    background-color:#ff385c;
     border-radius: 50%;
     text-align: center;
     display: flex;
@@ -658,13 +655,51 @@ section{
     align-items: center;
 }
 
-.btn-prev-b span,
-.btn-next-b span{
-    display: block;
-    text-align: center;
+
+.btn-prev-b,
+.btn-next-b{
+    padding: 0 0 0 0;
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
 }
-
-
+.btn-prev-b:hover,
+.btn-next-b:hover{
+    background: #eee;
+}
+.btn-prev-b::before,
+.btn-next-b::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-top: solid 1.8px #333;
+    border-right: solid 1.8px #333;
+    pointer-events: none;
+}
+.btn-prev-b::before {
+    left: 0;
+    margin-left: 12px;
+    transform: rotate(225deg);
+}
+.btn-next-b::before {
+    right: 0;
+    margin-right: 12px;
+    transform: rotate(45deg);
+}
 
 .calendar-list{
     position: relative;
@@ -767,6 +802,10 @@ section{
     background: rgb(34, 34, 34);
     border: 1.5px solid rgb(34, 34, 34);
     color: rgb(255, 255, 255);
+}
+.check-in-day--selected{
+    background: rgb(34, 34, 34);
+    color: #fff;
 }
 
 
@@ -1170,20 +1209,22 @@ section{
 .nav-bar-left__scroll-btn-wrap--right{
     background-image: linear-gradient(to right,rgb(255 255 255/0),#fff 30px);
     right:0px;
-    padding-right: 8px;
+    padding-left: 8px;
 }
 .nav-bar-left__scroll-btn{
     padding: 0 0 0 0;
     position: relative;
     cursor: pointer;
-}
-.nav-bar-left__scroll-btn--left{
-    left:8px;
+    margin: auto;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    border: solid 0.8px #aaa;
 }
 .nav-bar-left__scroll-btn--right{
-    right:8px;
-    position: absolute;
-    top: 30%;
+    transform: translateX(22px);
 }
 .nav-bar-left__scroll-btn::before {
     content: "";
@@ -1195,40 +1236,19 @@ section{
     content: '';
     width: 5px;
     height: 5px;
-    margin-top: -4px;
     border-top: solid 2.5px #333;
     border-right: solid 2.5px #333;
     pointer-events: none;
 }
 .nav-bar-left__scroll-btn--left::before {
     left: 0;
-    margin-left: 4px;
+    margin-left: 11px;
     transform: rotate(225deg);
 }
 .nav-bar-left__scroll-btn--right::before {
     right: 0;
-    margin-right: 4px;
+    margin-right: 11px;
     transform: rotate(45deg);
-}
-.nav-bar-left__scroll-btn::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    content: "";
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #fff;
-    z-index: 1;
-    border: solid 0.8px #aaa;
-    pointer-events: none;
-}
-.nav-bar-left__scroll-btn--left::after {
-    left: -8px;
-}
-.nav-bar-left__scroll-btn--right::after {
-    right: -8px;
 }
 .nav-slider-area{
     width: 100%;
@@ -1333,6 +1353,38 @@ section{
     grid-gap: 40px 24px; /*可変var*/
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+@media screen and (max-width: 549px) {
+    .main-d{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 550px) {
+    .main-d{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .main-d{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1128px) {
+    .main-d{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    .main-d{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+
+
 
 .hotel-information-a{
     font-size: 15px;
@@ -1352,15 +1404,20 @@ section{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: var(--title_max-num-lines,1);
-    color: var(--f-k-smk-x);
-    font-weight: var(--jx-zk-pv);
+    color: #222;
+    font-weight: 600;
     word-break: var(--title_word-break,break-all);
 }
 
 .hotel-information-2{
     grid-column: 1 / -1;
+    color:#717171;
 }
-
+.hotel-information-3{
+    color:#222;
+    font-weight: 600;
+    padding-top: 10px;
+}
 
 .stars{
     /*align-items: center;
@@ -1477,18 +1534,42 @@ section{
 
 .pic-hover-middle-prev-c,
 .pic-hover-middle-next-c{
-    border-radius: 50%;
-    border: 0;
+    padding: 0 0 0 0;
+    position: relative;
     cursor: pointer;
-    border-style: solid;
-    border-width: 1px;
-    padding: 0;
-    margin: 0;
-    background-clip: padding-box;
-    background-color: rgba(255,255,255,0.9);
-    border-color: rgba(0,0,0,0.08);
-    box-shadow: 0 0 0 1px transparent,0 0 0 4px transparent,var(--e-swdx-p);
-    transition: transform 0.25s ease;
+    margin: auto;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    opacity: 0.9;
+    display: none;
+}
+.pic-hover-middle-prev-c::before,
+.pic-hover-middle-next-c::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-top: solid 1.4px #333;
+    border-right: solid 1.4px #333;
+    pointer-events: none;
+}
+.pic-hover-middle-prev-c::before {
+    left: 0;
+    margin-left: 12px;
+    transform: rotate(225deg);
+}
+.pic-hover-middle-next-c::before {
+    right: 0;
+    margin-right: 12px;
+    transform: rotate(45deg);
 }
 
 .pic-hover-bottom-a{
@@ -1514,6 +1595,11 @@ section{
 
 .hotel-pic{
     min-width: 100%;
+}
+.hotel-pic-box-a:hover .pic-hover-middle-prev-c,
+.hotel-pic-box-a:hover .pic-hover-middle-next-c{
+    display: block;
+    transition: 0.2s;
 }
 
 .hotel-pic-b{

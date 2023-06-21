@@ -228,6 +228,7 @@ function showCalendar(year, month) {
 
 
 function createCalendar(year, month) {
+    var toDay = new Date() // 今日の日付を取得
     const startDate = new Date(year, month - 1, 1) // 月の最初の日を取得
     const endDate = new Date(year, month,  0) // 月の最後の日を取得
     const endDayCount = endDate.getDate() // 月の末日
@@ -242,7 +243,6 @@ function createCalendar(year, month) {
     calendarHtml += '<table class="dates">'
 
     // 曜日の行を作成
-
     for (let w = 0; w < 6; w++) {
         calendarHtml += '<tr>'
 
@@ -444,7 +444,6 @@ const calenarDateOption = function(){
         if(btnDayPlus3.classList.contains('btn-date-correct-b')){
             btnDayPlus3.classList.remove('btn-date-correct-b');
         }
-        
     });
 };
 
@@ -483,10 +482,11 @@ dateOptionLeftOrRight();
 
 //--------------------------↓ここから日付選択--------------------------//
 
-
 const theDayList = document.querySelectorAll('.daycount');
+const theCheckInDay_Disp = document.querySelector('.check-in-day_disp');
 
 theDayList.forEach(function(theDayList){
+    
 
     theDayList.addEventListener('click',function(){
         if((btnCheckIn.classList.contains('hide-box2-selected'))
@@ -495,10 +495,15 @@ theDayList.forEach(function(theDayList){
             btnCheckIn.classList.remove('hide-box2-selected');
             btnCheckOut.classList.add('hide-box2-selected');
         } 
-        if((btnCheckOut.classList.contains('hide-box2-selected'))
-        &&(theDayList.classList.contains('checkout-day-selected') === false)){
-            theDayList.classList.add('checkout-day-selected');
-        }
+        
+        theDayList.classList.toggle('check-in-day--selected');
+        let theCheckInDate_selected = document.querySelector('check-in-day--selected'); 
+        console.log(theCheckInDate_selected.innerHTML);
+        // theCheckInDay_Disp.innerHTML = theCheckInDate_selected.innerHTML;
+        // if((btnCheckOut.classList.contains('hide-box2-selected'))
+        // &&(theDayList.classList.contains('checkout-day-selected') === false)){
+        //     theDayList.classList.add('checkout-day-selected');
+        // }
     });
 });
 
@@ -547,7 +552,7 @@ theDayList.forEach(function(theDayList){
 
 const guestNumberCount = function() {
 
-    count_disp_adult.innerHTML = count_value_adult;
+    count_disp_adult.innerHTML = (count_value_adult + count_value_child);
 
      // カウントアップボタンクリック処理
     count_up_btn_adult.onclick = function (){
@@ -555,26 +560,34 @@ const guestNumberCount = function() {
         count_disp_adult.innerHTML = count_value_adult;
         count_disp_guestNumberDefault.classList.add('guest-bottom-1-delete');
         count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
-        count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + count_value_adult + "人";
+        count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
     };
 
+    // カウントダウンボタンクリック処理
     count_down_btn_adult.onclick = function (){
         if(count_value_adult >= 1) {
             count_value_adult -= 1;
           }
         count_disp_adult.innerHTML = count_value_adult;
+        count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
+        if(count_value_adult == 0) {
+            count_disp_guestNumberAllCountedGuest.classList.add('display-none');
+          }
     };
    
 
 
-    count_disp_child.innerHTML = count_value_child;
-
+    count_disp_child.innerHTML = (count_value_adult + count_value_child);
     // カウントアップボタンクリック処理
     count_up_btn_child.onclick = function (){
        count_value_child += 1;
        count_disp_child.innerHTML = count_value_child;
+       count_disp_guestNumberDefault.classList.add('guest-bottom-1-delete');
+       count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
+       count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
     };
     
+    // カウントダウンボタンクリック処理
     count_down_btn_child.onclick = function (){
        if(count_value_child >= 1) {
            count_value_child -= 1;
@@ -584,7 +597,6 @@ const guestNumberCount = function() {
 
 
     count_disp_baby.innerHTML = count_value_baby;
-
     // カウントアップボタンクリック処理
     count_up_btn_baby.onclick = function (){
        count_value_baby += 1;
@@ -592,30 +604,52 @@ const guestNumberCount = function() {
        count_disp_guestNumberDefault.classList.add('guest-bottom-1-delete');
        count_disp_guestNumberAllCountedBaby.classList.remove('display-none');
        count_disp_guestNumberAllCountedBaby.innerHTML = ",乳幼児" + count_value_baby + "人";
+        // 大人０人だったら自動で一人追加
+       if(count_value_adult <= 0){
+        count_value_adult += 1;
+        count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
+        count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
+      }
     };
-    
+    // カウントダウンボタンクリック処理
     count_down_btn_baby.onclick = function (){
        if(count_value_baby >= 1) {
            count_value_baby -= 1;
          }
        count_disp_baby.innerHTML = count_value_baby;
+       count_disp_guestNumberAllCountedBaby.innerHTML = ",乳幼児" + count_value_baby + "人";
+       if(count_value_baby == 0) {
+        count_disp_guestNumberAllCountedBaby.classList.add('display-none');
+      }
     };
 
 
 
     count_disp_pet.innerHTML = count_value_pet;
-
     // カウントアップボタンクリック処理
     count_up_btn_pet.onclick = function (){
         count_value_pet += 1;
         count_disp_pet.innerHTML = count_value_pet;
-    };
-    
+        count_disp_guestNumberDefault.classList.add('guest-bottom-1-delete');
+        count_disp_guestNumberAllCountedPet.classList.remove('display-none');
+        count_disp_guestNumberAllCountedPet.innerHTML = ",ペット" + count_value_baby + "匹";
+        // 大人０人だったら自動で一人追加
+        if(count_value_adult <= 0){
+            count_value_adult += 1;
+            count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
+            count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
+        }
+        };
+    // カウントダウンボタンクリック処理
     count_down_btn_pet.onclick = function (){
        if(count_value_pet >= 1) {
            count_value_pet -= 1;
          }
        count_disp_pet.innerHTML = count_value_pet; 
+       count_disp_guestNumberAllCountedPet.innerHTML = ",ペット" + count_value_baby + "匹";
+       if(count_value_pet == 0) {
+        count_disp_guestNumberAllCountedPet.classList.add('display-none');
+      }
     };
 
 
@@ -653,21 +687,34 @@ guestNumberCount();
 //--------------------------↓ここからnuv-bar スクロールボタン--------------------------//
 
 // オブジェクトと変数の準備
-const count_nav_scroll_left = document.querySelector('.nav-bar-left__scroll-btn--left');
-const count_nav_scroll_right = document.querySelector('.nav-bar-left__scroll-btn--right'); 
+const count_nav_scroll_left = document.getElementById('nav_scroll-btn--left');
+const count_nav_scroll_right = document.getElementById('nav_scroll-btn--right'); 
 const nav_bar = document.querySelector('.nav-slider-list'); 
 
 var count_up_navScroll = 0;
 var count_down_navScroll = 0;
 
-const navBarScroll = function() {
+const sliderwidth = document.querySelector(".nav-bar-left");
+let nav_bar_width = sliderwidth.clientWidth;
 
-    count_nav_scroll_right.onclick = function (){
-        count_up_navScroll += 1;
-        target.style.backgroundColor="#4040FF";
 
-        nav_bar.style.transform = 'translateX(50px)';  
-        // 230620メモ　buttonクリック反応してない
-    };
 
-}
+
+
+    // イベントリスナー (next)
+    count_nav_scroll_right.addEventListener("click", function(){
+        nav_bar.style.transition = ".3s";
+        count_up_navScroll ++;
+        nav_bar.style.transform = "translateX("+ (- nav_bar_width / 2 * count_up_navScroll) + "px)";
+
+        nav_bar.addEventListener("transitionend", function(){
+            if(count_up_navScroll == nav_bar.length / 1000){
+                nav_bar.style.transition = "none";
+                next.style.display = "none";
+            }
+        })
+    });
+
+
+
+
