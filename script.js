@@ -482,13 +482,14 @@ dateOptionLeftOrRight();
 
 //--------------------------↓ここから日付選択--------------------------//
 
-const theDayList = document.querySelectorAll('.daycount');
+const theDayLists = document.querySelectorAll('.daycount');
 const theCheckInDay_Disp = document.querySelector('.check-in-day_disp');
 
-theDayList.forEach(function(theDayList){
-    
+const theCheckInDay_Default = document.querySelector('.check-in-day_disp--default');
 
-    theDayList.addEventListener('click',function(){
+theDayLists.forEach((theDayList, index) => {
+    
+theDayList.addEventListener('click',function(){
         if((btnCheckIn.classList.contains('hide-box2-selected'))
         &&(theDayList.classList.contains('checkin-day-selected') === false)){
             theDayList.classList.add('checkin-day-selected');
@@ -497,18 +498,24 @@ theDayList.forEach(function(theDayList){
         } 
         
         theDayList.classList.toggle('check-in-day--selected');
-        let theCheckInDate_selected = document.querySelector('check-in-day--selected'); 
-        console.log(theCheckInDate_selected.innerHTML);
-        // theCheckInDay_Disp.innerHTML = theCheckInDate_selected.innerHTML;
-        // if((btnCheckOut.classList.contains('hide-box2-selected'))
-        // &&(theDayList.classList.contains('checkout-day-selected') === false)){
-        //     theDayList.classList.add('checkout-day-selected');
-        // }
+        var theCheckInDate_selected = document.querySelector('.check-in-day--selected'); 
+        let theCheckInMonch_selected_parent = theCheckInDate_selected.closest(".calendar-b");
+
+        theCheckInMonch_selected_parent.classList.add('checkin_month--parent');
+
+        var theCheckInMonch_selected = document.querySelector('.checkin_month--parent .yearmonth-b');
+        // theCheckInMonch_selected = theCheckInMonch_selected.replace("2023年","");
+
+        theCheckInDay_Default.classList.add('display-none');
+        theCheckInDay_Disp.innerHTML = (theCheckInMonch_selected.innerHTML) + (theCheckInDate_selected.innerHTML)  + "日";
+        if((btnCheckOut.classList.contains('hide-box2-selected'))
+        &&(theDayList.classList.contains('checkout-day-selected') === false)){
+            theDayList.classList.add('checkout-day-selected');
+        }
     });
 });
 
 //-------未完成
-
 
 
 
@@ -585,6 +592,13 @@ const guestNumberCount = function() {
        count_disp_guestNumberDefault.classList.add('guest-bottom-1-delete');
        count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
        count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
+       // 大人０人だったら自動で一人追加
+       if(count_value_adult <= 0){
+        count_value_adult += 1;
+        count_disp_adult.innerHTML = count_value_adult;
+        count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
+        count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
+      }
     };
     
     // カウントダウンボタンクリック処理
@@ -607,6 +621,7 @@ const guestNumberCount = function() {
         // 大人０人だったら自動で一人追加
        if(count_value_adult <= 0){
         count_value_adult += 1;
+        count_disp_adult.innerHTML = count_value_adult;
         count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
         count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
       }
@@ -636,6 +651,7 @@ const guestNumberCount = function() {
         // 大人０人だったら自動で一人追加
         if(count_value_adult <= 0){
             count_value_adult += 1;
+            count_disp_adult.innerHTML = count_value_adult;
             count_disp_guestNumberAllCountedGuest.classList.remove('display-none');
             count_disp_guestNumberAllCountedGuest.innerHTML = "ゲスト" + (count_value_adult + count_value_child) + "人";
         }
@@ -716,5 +732,25 @@ let nav_bar_width = sliderwidth.clientWidth;
     });
 
 
+    
+//--------------------------↓ここからお気に入り追加ボタン--------------------------//
 
+// オブジェクトと変数の準備
+const btns_fav = document.querySelectorAll('.pic-hover-top-right-c');
+const icons_heart_gray = document.querySelectorAll('.icon_favorite--gray'); 
+const icons_heart_pink = document.querySelectorAll('.icon_favorite--pink'); 
+
+
+btns_fav.forEach((btn_fav, index) => {
+    btn_fav.addEventListener('click', function() {
+        const icon_heart_gray = icons_heart_gray[index];
+        const icon_heart_pink = icons_heart_pink[index]; 
+        
+        icon_heart_gray.classList.toggle('display-none');
+        icon_heart_pink.classList.toggle('display-none');
+      });
+
+});
+
+    
 

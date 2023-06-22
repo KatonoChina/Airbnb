@@ -1382,6 +1382,20 @@ section{
     }
 }
 
+@media screen and (min-width: 1880px) {
+    .main-d{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .main-b {
+        max-width: 2520px;
+        margin: 16px auto;
+        -webkit-padding-start: 80px;
+        -webkit-padding-end: 80px;
+        padding-inline-end: 80px;
+        padding-inline-start: 80px;
+    }
+}
+
 
 
 
@@ -1507,6 +1521,17 @@ section{
     transition: transform 0.25s ease;
     margin: -2px 0 0;
     padding: 2px 0 0 0;
+
+    width: 24px;
+    cursor: pointer;
+    transition: 0.1s;
+    text-align: center;
+}
+
+.pic-hover-top-right-c:active .icon_favorite--gray,
+.pic-hover-top-right-c:active .icon_favorite--pink{
+    width: 22px;
+    transition: 0.2s;
 }
 
 
