@@ -184,7 +184,7 @@ const menuBtnSelect = function () {
 
 menuBtnSelect();
 
-//submenu内部をクリックしたときに親要素(ボタンクスタイル変更など)に影響が出ないようにする
+//submenu内部をクリックしたときに親要素(ボタンスタイル変更など)に影響が出ないようにする
 subMenuLocation.onclick = function (event){
     event.stopPropagation() ;
 };
@@ -490,13 +490,13 @@ const theCheckInDay_Default = document.querySelector('.check-in-day_disp--defaul
 theDayLists.forEach((theDayList, index) => {
     
 theDayList.addEventListener('click',function(){
-        if((btnCheckIn.classList.contains('hide-box2-selected'))
-        &&(theDayList.classList.contains('checkin-day-selected') === false)){
-            theDayList.classList.add('checkin-day-selected');
+        if(btnCheckIn.classList.contains('hide-box2-selected')
+        ){
             btnCheckIn.classList.remove('hide-box2-selected');
             btnCheckOut.classList.add('hide-box2-selected');
         } 
-        
+        btnCheckIn.classList.remove('hide-box2-selected');
+        btnCheckOut.classList.add('hide-box2-selected');
         theDayList.classList.toggle('check-in-day--selected');
         var theCheckInDate_selected = document.querySelector('.check-in-day--selected'); 
         let theCheckInMonch_selected_parent = theCheckInDate_selected.closest(".calendar-b");
@@ -504,7 +504,7 @@ theDayList.addEventListener('click',function(){
         theCheckInMonch_selected_parent.classList.add('checkin_month--parent');
 
         var theCheckInMonch_selected = document.querySelector('.checkin_month--parent .yearmonth-b');
-        // theCheckInMonch_selected = theCheckInMonch_selected.replace("2023年","");
+        
 
         theCheckInDay_Default.classList.add('display-none');
         theCheckInDay_Disp.innerHTML = (theCheckInMonch_selected.innerHTML) + (theCheckInDate_selected.innerHTML)  + "日";
@@ -512,6 +512,11 @@ theDayList.addEventListener('click',function(){
         &&(theDayList.classList.contains('checkout-day-selected') === false)){
             theDayList.classList.add('checkout-day-selected');
         }
+        // theCheckInMonch_selected = theCheckInMonch_selected.replace("2023年","");
+        // console.log(theCheckInMonch_selected.innerHTML);
+
+        
+
     });
 });
 
@@ -707,31 +712,66 @@ const count_nav_scroll_left = document.getElementById('nav_scroll-btn--left');
 const count_nav_scroll_right = document.getElementById('nav_scroll-btn--right'); 
 const nav_bar = document.querySelector('.nav-slider-list'); 
 
+const count_nav_scroll_left__wrap = document.getElementsByClassName('nav-bar-left__scroll-btn-wrap--left');
+const count_nav_scroll_right__wrap = document.getElementsByClassName('nav-bar-left__scroll-btn-wrap--right'); 
+
+const sliderwidth = document.querySelector(".nav-slider-list");
+
 var count_up_navScroll = 0;
 var count_down_navScroll = 0;
-
-const sliderwidth = document.querySelector(".nav-bar-left");
 let nav_bar_width = sliderwidth.clientWidth;
 
 
+var count_translateX_amount = (nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll));
+
+
+
+
+// if(count_down_navScroll <= 0){
+//     nav_bar.style.transition = "none";
+//     count_nav_scroll_left.style.display = "none";
+// };
 
 
 
     // イベントリスナー (next)
     count_nav_scroll_right.addEventListener("click", function(){
-        nav_bar.style.transition = ".3s";
+        nav_bar.style.transition = ".5s";
         count_up_navScroll ++;
-        nav_bar.style.transform = "translateX("+ (- nav_bar_width / 2 * count_up_navScroll) + "px)";
+        nav_bar.style.transform = "translateX("+ (- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll)) + "px)";
+        count_nav_scroll_left.style.display = "block";
 
         nav_bar.addEventListener("transitionend", function(){
             if(count_up_navScroll == nav_bar.length / 1000){
                 nav_bar.style.transition = "none";
-                next.style.display = "none";
+                count_nav_scroll_right.style.display = "none";
+                count_nav_scroll_left.style.display = "block";
             }
         })
+
+        console.log(count_translateX_amount);
+        console.log(count_up_navScroll);
     });
 
+    // イベントリスナー (prev)
+    count_nav_scroll_left.addEventListener("click", function(){
+        nav_bar.style.transition = ".5s";
+        count_down_navScroll --;
+        nav_bar.style.transform = "translateX("+ (- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll)) + "px)";
 
+        nav_bar.addEventListener("transitionend", function(){
+            if((- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll)) >= 0){
+                nav_bar.style.transition = "none";
+                count_nav_scroll_left.style.display = "none";
+                count_nav_scroll_right__wrap.style.display = "none";
+            }
+        })
+
+        console.log(count_translateX_amount);
+        console.log(count_down_navScroll);
+    });
+
+    console.log(count_translateX_amount);
     
 //--------------------------↓ここからお気に入り追加ボタン--------------------------//
 

@@ -1596,6 +1596,16 @@ section{
     margin-right: 12px;
     transform: rotate(45deg);
 }
+.hotel-pic-box-a:hover .pic-hover-middle-prev-c,
+.hotel-pic-box-a:hover .pic-hover-middle-next-c{
+    display: block;
+    transition: 0.2s;
+}
+/* .pic-hover-middle-prev-c:hover,
+.pic-hover-middle-next-c:hover{
+    scale: 1.5;
+    opacity: 1;
+} */
 
 .pic-hover-bottom-a{
     align-items: flex-end;
@@ -1621,11 +1631,7 @@ section{
 .hotel-pic{
     min-width: 100%;
 }
-.hotel-pic-box-a:hover .pic-hover-middle-prev-c,
-.hotel-pic-box-a:hover .pic-hover-middle-next-c{
-    display: block;
-    transition: 0.2s;
-}
+
 
 .hotel-pic-b{
 }
