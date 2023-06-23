@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function(){
 	function menuClick(){
 		searchBox.classList.add('visible');
         headerBackGround.classList.add('header-background-visible');// クリックした際に実行する処理を記述
+        if((count_disp_guestNumberAllCountedGuest.classList.contains('display-none')) == false){
+            count_disp_guestNumberDefault.style.display = "none";
+            count_disp_guestNumberDefault.classList.remove('guest-bottom-1-delete');
+           };
 	}
 
 	// 引数に指定したclassの値をもつ要素をすべて取得
@@ -697,6 +701,19 @@ const guestNumberCount = function() {
    //reset_btn.onclick = function (){
         //count_value = 0; count_disp.innerHTML = count_value;
    //}
+
+   if((count_disp_guestNumberAllCountedGuest.classList.contains('display-none')) == false){
+    count_disp_guestNumberDefault.style.display = "none";
+    count_disp_guestNumberDefault.classList.remove('guest-bottom-1-delete');
+   };
+
+   if((count_disp_guestNumberAllCountedGuest.classList.contains('display-none')) == false){
+    console.log('おつかれ');
+   };
+
+   if((count_disp_guestNumberAllCountedGuest.classList.contains('display-none')) == true){
+    console.log('おつ');
+   };
    
 };
 
@@ -712,8 +729,8 @@ const count_nav_scroll_left = document.getElementById('nav_scroll-btn--left');
 const count_nav_scroll_right = document.getElementById('nav_scroll-btn--right'); 
 const nav_bar = document.querySelector('.nav-slider-list'); 
 
-const count_nav_scroll_left__wrap = document.getElementsByClassName('nav-bar-left__scroll-btn-wrap--left');
-const count_nav_scroll_right__wrap = document.getElementsByClassName('nav-bar-left__scroll-btn-wrap--right'); 
+const count_nav_scroll_left__wrap = document.querySelector('.nav-bar-left__scroll-btn-wrap--left');
+const count_nav_scroll_right__wrap = document.querySelector('nav-bar-left__scroll-btn-wrap--right'); 
 
 const sliderwidth = document.querySelector(".nav-slider-list");
 
@@ -722,15 +739,26 @@ var count_down_navScroll = 0;
 let nav_bar_width = sliderwidth.clientWidth;
 
 
-var count_translateX_amount = (nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll));
+var count_translateX_amount = (- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll));
 
 
 
+var nav_bar_array = []; //.nav-slider-list内のli要素のwidthを全て配列として取得
+    for(var i = 0; i < $(".nav-slider-list li").length; i++){
+        nav_bar_array.push($(".nav-slider-list li").eq(i).width());
+    };
+    var childElementWidth = 0; //配列として取得した.nav-slider-list内のli要素のwidthの合計値
+    for(var j = 0; j < nav_bar_array.length; j++){
+        childElementWidth += nav_bar_array[j]; 
+    };
 
-// if(count_down_navScroll <= 0){
-//     nav_bar.style.transition = "none";
-//     count_nav_scroll_left.style.display = "none";
-// };
+    if(((- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll)) <= 0) && (count_nav_scroll_left__wrap.classList.contains('display-none'))){
+        count_nav_scroll_left.style.display = "block";
+        count_nav_scroll_left__wrap.classList.remove('display-none');
+    };
+    console.log(count_translateX_amount);
+    console.log(- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll));//クリックのカウントが要素に入ってるからだめ
+
 
 
 
@@ -741,16 +769,30 @@ var count_translateX_amount = (nav_bar_width / 2 * (count_up_navScroll + count_d
         nav_bar.style.transform = "translateX("+ (- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll)) + "px)";
         count_nav_scroll_left.style.display = "block";
 
-        nav_bar.addEventListener("transitionend", function(){
-            if(count_up_navScroll == nav_bar.length / 1000){
-                nav_bar.style.transition = "none";
-                count_nav_scroll_right.style.display = "none";
-                count_nav_scroll_left.style.display = "block";
-            }
-        })
+        var nav_bar_array = []; //.nav-slider-list内のli要素のwidthを全て配列として取得
+        for(var i = 0; i < $(".nav-slider-list li").length; i++){
+            nav_bar_array.push($(".nav-slider-list li").eq(i).width());
+        };
+        var childElementWidth = 0; //配列として取得した.nav-slider-list内のli要素のwidthの合計値
+        for(var j = 0; j < nav_bar_array.length; j++){
+            childElementWidth += nav_bar_array[j]; 
+        };
+
+        console.log(nav_bar_array);
+        console.log(childElementWidth);
+        console.log(-(childElementWidth)); 
+
+        if((- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll)) <= -(childElementWidth) + nav_bar_width){//
+            nav_bar.style.transition = "none";
+            count_nav_scroll_right.style.display = "none";
+            count_nav_scroll_left.style.display = "block";
+        }
 
         console.log(count_translateX_amount);
         console.log(count_up_navScroll);
+        console.log(count_down_navScroll);
+        console.log(nav_bar_width);
+        console.log(- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll));
     });
 
     // イベントリスナー (prev)
@@ -763,7 +805,7 @@ var count_translateX_amount = (nav_bar_width / 2 * (count_up_navScroll + count_d
             if((- nav_bar_width / 2 * (count_up_navScroll + count_down_navScroll)) >= 0){
                 nav_bar.style.transition = "none";
                 count_nav_scroll_left.style.display = "none";
-                count_nav_scroll_right__wrap.style.display = "none";
+                count_nav_scroll_left__wrap.classList.add('display-none');
             }
         })
 
@@ -772,6 +814,8 @@ var count_translateX_amount = (nav_bar_width / 2 * (count_up_navScroll + count_d
     });
 
     console.log(count_translateX_amount);
+
+    
     
 //--------------------------↓ここからお気に入り追加ボタン--------------------------//
 
